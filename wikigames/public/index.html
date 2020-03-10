@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
+<head>
+    <meta charset="utf-8"/>
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="theme-color" content="#000000"/>
     <meta
-      name="description"
-      content="Web site created using create-react-app"
+            name="description"
+            content="Web site created using create-react-app"
     />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png"/>
     <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json"/>
     <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
@@ -24,20 +24,75 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>React App</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
-      This HTML file is a template.
-      If you open it directly in the browser, you will see an empty page.
+    <title>Wiki Games</title>
+</head>
+<body>
+<main class="container-fluid">
+    <!--      HEADER COM NAVBAR-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark row">
+        <a class="navbar-brand text-light" href="#">WikiGames</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-      You can add webfonts, meta tags, or analytics to this file.
-      The build step will place the bundled scripts into the <body> tag.
-
-      To begin the development, run `npm start` or `yarn start`.
-      To create a production bundle, use `npm run build` or `yarn build`.
-    -->
-  </body>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="javascript:;" id="developers" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Desenvolvedores
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Ubsisoft</a>
+                        <a class="dropdown-item" href="#">Valve</a>
+                        <a class="dropdown-item" href="#">Actvision</a>
+                        <a class="dropdown-item" href="#">EA Games</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Ver todos</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="javascript:;" id="plataforms" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Plataformas
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">PC</a>
+                        <a class="dropdown-item" href="#">PlayStation</a>
+                        <a class="dropdown-item" href="#">Xbox</a>
+                        <a class="dropdown-item" href="#">Nintendo</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">Ver todas</a>
+                    </div>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Nome do jogo" aria-label="Buscar">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+            </form>
+        </div>
+    </nav>
+    <header class="row position-relative d-flex justify-content-center align-items-center">
+        <h3 class="text-header display-4 text-light text-center d-flex flex-column position-absolute">WikiGames <small class="h6">Sua fonte de informações sobre games.</small></h3>
+        <figure class="figure header-img overflow-hidden d-flex justify-content-center align-items-center">
+            <img class="img-fluid dark-img" src="imgs/wikigames-header.jpg" alt="Capa do site">
+        </figure>
+    </header>
+    <!--      /HEADER COM NAVBAR-->
+    <section class="row">
+        <div class="col-12 mt-5 mb-3">
+            <h3 class="display-4">Os mais queridos</h3>
+        </div>
+        <!--        LISTAGEM LANÇAMENTOS-->
+        <div id="root" class="w-100"></div>
+        <!--        /LISTAGEM LANÇAMENTOS-->
+    </section>
+</main>
+<noscript>You need to enable JavaScript to run this app.</noscript>
+</body>
 </html>
