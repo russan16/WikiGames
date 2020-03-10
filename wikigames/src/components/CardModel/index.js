@@ -19,26 +19,26 @@ export default class ReleaseList extends Component {
         return (
             <div className="released-list w-100 row">
                 <div className="col-12 mt-5 mb-3">
-                    <h3 className="display-4">Os mais populares</h3>
+                    <h3 className="display-4 text-light">Os mais populares</h3>
                 </div>
                 {this.state.games.map(game => (
-                    <div key={game.id} className="card col-6 col-md-4 col-lg-2">
+                    <div key={game.id} className="card bg-transparent border-0 col-6 col-md-4 col-lg-2">
                         <div className="card-body">
                             <figure className="figure card-figure d-flex justify-content-center align-items-center">
                                 <img className="card-img-top img-fluid" src={game.background_image} alt="Card image cap"/>
                             </figure>
-                            <h5 className="card-title">{game.name}</h5>
-                            <p className="card-text">Nota: {game.rating}</p>
-                            <p className="card-text">Lançamento: {game.released}</p>
+                            <h5 className="card-title text-light">{game.name}</h5>
+                            <p className="card-text text-light">Nota: {game.rating}</p>
+                            <p className="card-text text-light">Lançamento: {game.released}</p>
                             <div className="w-100 my-3">
-                                <span className="mr-2">Generos:</span>
+                                <span className="mr-2 text-light">Generos:</span>
                                 {game.genres.map(element => (
-                                    <span key={element.name} className="badge badge-warning mr-2">{element.name}</span>
+                                    <span key={element.name} className="badge badge-secondary mr-2">{element.name}</span>
                                 ))}
                             </div>
                         </div>
                         <div className="w-100 mb-3">
-                            <a href="#" className="btn btn-primary btn-block">Ver mais</a>
+                            <a href={`game/${game.slug}`} className="btn btn-info btn-block">Ver mais</a>
                         </div>
                     </div>
                 ))}

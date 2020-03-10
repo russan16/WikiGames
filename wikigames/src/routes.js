@@ -6,6 +6,7 @@ const Routes = () => (
     <BrowserRouter>
         <Switch>
             <Route exact path="/" component={ReleaseList}/>
+            <Route path="/game:slug" component={ReleaseList}/>
         </Switch>
     </BrowserRouter>
 );
