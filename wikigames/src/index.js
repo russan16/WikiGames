@@ -10,3 +10,9 @@ ReactDOM.render(<App />, document.getElementById('root'));
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA
 serviceWorker.unregister();
+
+// ENDPOINTS DA API
+/*
+const releasedList = 'https://api.rawg.io/api/games?ordering=released';
+const searchList = `https://api.rawg.io/api/games?search=${searchText}`;
+*/
