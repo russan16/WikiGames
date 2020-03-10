@@ -1,9 +1,9 @@
 import React from "react";
-import CardModel from "./components/CardModel";
+import Routes from "./routes";
 
 const App = () => (
     <div className="wrapper-released-list w-100">
-        <CardModel/>
+        <Routes/>
     </div>
 );
 
