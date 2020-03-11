@@ -18,3 +18,12 @@
     height: 100%;
   }
 }
+
+.img-info {
+  width: 50vw;
+  min-width: 50vw;
+  & img {
+    width: 100%;
+    height: auto;
+  }
+}
