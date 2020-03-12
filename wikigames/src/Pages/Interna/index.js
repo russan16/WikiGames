@@ -6,7 +6,7 @@ export default class Interna extends Component {
         product: {},
         generos: [{name:""}],
         devs: [{name:""}]
-    }
+    };
 
     async componentDidMount() {
         const {id} = this.props.match.params;
