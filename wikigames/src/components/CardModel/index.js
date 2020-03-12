@@ -54,7 +54,7 @@ export default class ReleaseList extends Component {
                             </div>
                         </div>
                         <div className="w-100 mb-3">
-                            <a href={`game/${game.id}`} className="btn btn-info btn-block">Ver mais</a>
+                            <a href={`/game/${game.id}`} className="btn btn-info btn-block" target="_blank">Ver mais</a>
                         </div>
                     </div>
                 ))}
