@@ -22,11 +22,11 @@ export default class Desenvolvedores extends Component {
                     <h1 className="display-4 text-light my-4">Desenvolvedores</h1>
                 </div>
                 <table className="devs table table-dark">
-                    <thead>
+                    <thead className="bg-secondary">
                         <tr>
-                            <th scope="col">Desenvolvedor</th>
-                            <th scope="col">Jogos lançados</th>
-                            <th scope="col">Top games</th>
+                            <th className="text-uppercase" scope="col">Desenvolvedor</th>
+                            <th className="text-uppercase" scope="col">Jogos lançados</th>
+                            <th className="text-uppercase" scope="col">Top games</th>
                         </tr>
                     </thead>
                     <tbody>
