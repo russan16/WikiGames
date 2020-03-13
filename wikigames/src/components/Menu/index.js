@@ -10,24 +10,14 @@ const Menu = () => (
 
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav mr-auto">
-                <li className="nav-item active">
+                <li className="nav-item">
                     <a className="nav-link" href="/">Home</a>
                 </li>
                 <li className="nav-item">
                     <a className="nav-link" href="/busca">Buscar</a>
                 </li>
-                <li className="nav-item dropdown">
-                    <a className="nav-link dropdown-toggle" href="#" id="developers" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Desenvolvedores
-                    </a>
-                    <div className="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a className="dropdown-item" href="#">Ubsisoft</a>
-                        <a className="dropdown-item" href="#">Valve</a>
-                        <a className="dropdown-item" href="#">Actvision</a>
-                        <a className="dropdown-item" href="#">EA Games</a>
-                        <div className="dropdown-divider"></div>
-                        <a className="dropdown-item" href="#">Ver todos</a>
-                    </div>
+                <li className="nav-item">
+                    <a className="nav-link" href="/desenvolvedores">Desenvolvedores</a>
                 </li>
                 <li className="nav-item">
                     <a className="nav-link" href="/plataformas">Plataformas</a>
