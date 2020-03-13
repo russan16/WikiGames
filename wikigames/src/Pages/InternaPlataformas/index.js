@@ -3,7 +3,8 @@ import api from "../../services/api";
 
 export default class InternaPlataformas extends Component {
     state = {
-        games: []
+        games: [],
+        platformName: ''
     }
 
     componentDidMount() {
@@ -12,16 +13,18 @@ export default class InternaPlataformas extends Component {
 
     listGames = async () => {
         const {id} = this.props.match.params;
+        const {platName} = this.props.match.params;
         const result = await api.get(`games?platforms=${id}`);
 
         this.setState({games: result.data.results});
+        this.setState({platformName: platName});
     }
 
     render() {
         return (
             <div className="row my-5">
                 <div className="w-100 mb-3">
-                    <h1 className="display-4 text-light">Mostrando jogos da plataforma</h1>
+                    <h1 className="display-4 text-light">Plataforma: {this.state.platformName}</h1>
                 </div>
                 {this.state.games.map(platItem =>(
                     // CARD OBJ

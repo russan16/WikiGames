@@ -13,7 +13,7 @@ const Routes = () => (
             <Route path="/game/:id" component={Interna}/>
             <Route path="/busca" component={Busca}/>
             <Route path="/plataformas" component={Plataformas}/>
-            <Route path="/plataforma-games/:id" component={InternaPlataformas}/>
+            <Route path="/plataforma-games/:id/:platName" component={InternaPlataformas}/>
         </Switch>
     </BrowserRouter>
 );

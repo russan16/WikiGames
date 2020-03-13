@@ -5,7 +5,9 @@ export default class ReleaseList extends Component {
     state = {
         games: [],
         pagination: 12,
-        limit: true
+        limit: true,
+        hoje: '2020-03-13',
+        anoPassado: '2019-03-13'
     };
 
     componentDidMount() {
@@ -27,7 +29,13 @@ export default class ReleaseList extends Component {
 
 
     loadReleasedGames = async () => {
-        const response = await api.get(`games?page_size=${this.state.pagination}`);
+        const time = new Date();
+        const dia = time.getDate();
+        const mes = ((time.getMonth() + 1) < 10 ? '0' : '') + (time.getMonth() + 1);
+        const ano = time.getFullYear();
+        this.state.anoPassado = (ano - 1) + '-' + mes + '-' + dia;
+        this.state.hoje = ano + '-' + mes + '-' + dia;
+        const response = await api.get(`games?page_size=${this.state.pagination}&dates=${this.state.anoPassado},${this.state.hoje}`);
         this.setState({games: response.data.results});
     };
 
@@ -35,7 +43,7 @@ export default class ReleaseList extends Component {
         return (
             <div className="released-list w-100 row pb-5">
                 <div className="col-12 mt-5 mb-3">
-                    <h3 className="display-4 text-light">Os mais populares</h3>
+                    <h3 className="display-4 text-light">Recentes</h3>
                 </div>
                 {this.state.games.map(game => (
                     <div key={game.id} className="card bg-transparent rounded-0 border-secondary col-6 col-md-4 col-lg-2">

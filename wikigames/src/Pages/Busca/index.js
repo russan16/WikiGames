@@ -3,7 +3,7 @@ import api from "../../services/api";
 
 export default class Busca extends Component {
     state = {
-        textSearch: 'all',
+        textSearch: '',
         result: [],
         buscaAtiva: false,
         empty: false
@@ -12,7 +12,8 @@ export default class Busca extends Component {
     firstPrint = async () => {
         const response = await api.get(`games?search=${this.state.textSearch}`);
         this.setState({result: response.data.results});
-        if (!response) {
+
+        if (this.state.result.length == 0) {
             this.setState({empty:true});
         } else {
             this.setState({empty:false});
@@ -22,7 +23,7 @@ export default class Busca extends Component {
     startSearch = () => {
         this.setState({buscaAtiva: true});
         const inputSearch = document.getElementById('search_input').value;
-        if (inputSearch != '') {
+        if (inputSearch !== '') {
             this.state.textSearch = inputSearch;
             this.firstPrint();
         }
@@ -47,7 +48,7 @@ export default class Busca extends Component {
                     <strong>Faça uma busca e deixe com a gente.</strong>
                 </div>
                 <div className={this.state.empty ? 'alert alert-danger text-center mt-5': 'd-none'}>
-                    <strong>Nenhum resultado encontrado</strong>
+                    <strong>Nenhum resultado encontrado para <span className="text-uppercase">"{this.state.textSearch}"</span></strong>
                 </div>
                 <div className={this.state.buscaAtiva ? 'w-100 mt-5 row mb-5' : 'd-none'}>
                     {this.state.result.map(games => (
