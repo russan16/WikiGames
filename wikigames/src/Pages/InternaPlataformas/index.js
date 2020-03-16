@@ -42,6 +42,12 @@ export default class InternaPlataformas extends Component {
                                     <span key={element.name} className="badge badge-secondary mr-2">{element.name}</span>
                                 ))}
                             </div>
+                            <div className="w-100">
+                                <span className="mr-2 text-light">Plataformas:</span>
+                                {platItem.platforms.map(plataforma => (
+                                    <a href={`/plataforma-games/${plataforma.platform.id}/${plataforma.platform.name}`} key={plataforma.platform.id} className="badge badge-secondary mr-2">{plataforma.platform.name}</a>
+                                ))}
+                            </div>
                         </div>
                         <div className="w-100 mb-3">
                             <a href={`/game/${platItem.id}`} className="btn btn-info btn-block" target="_blank">Ver mais</a>

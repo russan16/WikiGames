@@ -64,7 +64,13 @@ export default class Busca extends Component {
                                 <div className="w-100 my-3">
                                     <span className="mr-2 text-light">Generos:</span>
                                     {games.genres.map(element => (
-                                        <span key={element.name} className="badge badge-secondary mr-2">{element.name}</span>
+                                        <a href={`/genero/${element.id}/${element.name}`} key={element.name} className="badge badge-secondary mr-2">{element.name}</a>
+                                    ))}
+                                </div>
+                                <div className="w-100">
+                                    <span className="mr-2 text-light">Plataformas:</span>
+                                    {games.platforms.map(plataforma => (
+                                        <a href={`/plataforma-games/${plataforma.platform.id}/${plataforma.platform.name}`} key={plataforma.platform.id} className="badge badge-secondary mr-2">{plataforma.platform.name}</a>
                                     ))}
                                 </div>
                             </div>

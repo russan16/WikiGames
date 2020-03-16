@@ -57,7 +57,13 @@ export default class ReleaseList extends Component {
                             <div className="w-100 my-3">
                                 <span className="mr-2 text-light">Generos:</span>
                                 {game.genres.map(element => (
-                                    <span key={element.name} className="badge badge-secondary mr-2">{element.name}</span>
+                                    <a href={`/genero/${element.id}/${element.name}`} key={element.name} className="badge badge-secondary mr-2">{element.name}</a>
+                                ))}
+                            </div>
+                            <div className="w-100 my-3">
+                                <span className="mr-2 text-light">Plataformas:</span>
+                                {game.platforms.map(element => (
+                                    <a href={`/plataforma-games/${element.platform.id}/${element.platform.name}`} key={element.platform.id} className="badge badge-secondary mr-2">{element.platform.name}</a>
                                 ))}
                             </div>
                         </div>

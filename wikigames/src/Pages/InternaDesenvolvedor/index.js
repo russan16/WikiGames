@@ -27,7 +27,7 @@ export default class InternaDesenvolvedor extends Component {
                 </div>
 
                 <div className="row">
-                    {this.state.devInfo.map(info =>(
+                    {this.state.devInfo.map(info => (
                         // LOOP DE ITENS
                         <div key={info.id} className="card bg-transparent rounded-0 border-secondary col-6 col-md-4 col-lg-2">
                             <div className="card-body">
@@ -40,10 +40,17 @@ export default class InternaDesenvolvedor extends Component {
                                 <div className="w-100 my-3">
                                     <span className="mr-2 text-light">Generos:</span>
                                     {info.genres.map(element => (
-                                        <span key={element.name} className="badge badge-secondary mr-2">{element.name}</span>
+                                        <a href={`/genero/${element.id}/${element.name}`} key={element.name} className="badge badge-secondary mr-2">{element.name}</a>
+                                    ))}
+                                </div>
+                                <div className="w-100">
+                                    <span className="mr-2 text-light">Plataformas:</span>
+                                    {info.platforms.map(plataforma => (
+                                        <a href={`/plataforma-games/${plataforma.platform.id}/${plataforma.platform.name}`} key={plataforma.platform.id} className="badge badge-secondary mr-2">{plataforma.platform.name}</a>
                                     ))}
                                 </div>
                             </div>
+
                             <div className="w-100 mb-3">
                                 <a href={`/game/${info.id}`} className="btn btn-info btn-block" target="_blank">Ver mais</a>
                             </div>

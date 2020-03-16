@@ -20,6 +20,9 @@ const Menu = () => (
                     <a className="nav-link" href="/desenvolvedores">Desenvolvedores</a>
                 </li>
                 <li className="nav-item">
+                    <a className="nav-link" href="/generos">Gêneros</a>
+                </li>
+                <li className="nav-item">
                     <a className="nav-link" href="/plataformas">Plataformas</a>
                 </li>
             </ul>
