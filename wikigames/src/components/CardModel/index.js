@@ -4,29 +4,13 @@ import api from "../../services/api";
 export default class ReleaseList extends Component {
     state = {
         games: [],
-        pagination: 12,
-        limit: true,
-        hoje: '2020-03-13',
-        anoPassado: '2019-03-13'
+        hoje: '',
+        anoPassado: ''
     };
 
     componentDidMount() {
         this.loadReleasedGames();
-        this.viewMore();
     };
-
-    viewMore = () => {
-        const calc = this.state.pagination;
-        this.setState({pagination: calc + 12});
-        console.log(calc);
-        if (calc < 48) {
-            this.loadReleasedGames();
-        } else {
-            this.loadReleasedGames();
-            this.setState({limit: false});
-        }
-    }
-
 
     loadReleasedGames = async () => {
         const time = new Date();
@@ -35,7 +19,7 @@ export default class ReleaseList extends Component {
         const ano = time.getFullYear();
         this.state.anoPassado = (ano - 1) + '-' + mes + '-' + dia;
         this.state.hoje = ano + '-' + mes + '-' + dia;
-        const response = await api.get(`games?page_size=${this.state.pagination}&dates=${this.state.anoPassado},${this.state.hoje}`);
+        const response = await api.get(`games?dates=${this.state.anoPassado},${this.state.hoje}`);
         this.setState({games: response.data.results});
     };
 
@@ -72,9 +56,6 @@ export default class ReleaseList extends Component {
                         </div>
                     </div>
                 ))}
-                <div id="loadMore" className={this.state.limit ? 'my-3 col-12' : 'd-none'}>
-                    <button onClick={this.viewMore} className="btn btn-warning mx-auto d-block text-uppercase">Carregar mais</button>
-                </div>
             </div>
         );
     }

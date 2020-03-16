@@ -39,7 +39,7 @@ export default class InternaPlataformas extends Component {
                             <div className="w-100 my-3">
                                 <span className="mr-2 text-light">Generos:</span>
                                 {platItem.genres.map(element => (
-                                    <span key={element.name} className="badge badge-secondary mr-2">{element.name}</span>
+                                    <a href={`/genero/${element.id}/${element.name}`} key={element.name} className="badge badge-secondary mr-2">{element.name}</a>
                                 ))}
                             </div>
                             <div className="w-100">
