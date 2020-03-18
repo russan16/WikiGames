@@ -29,7 +29,7 @@ export default class InternaDesenvolvedor extends Component {
                 <div className="row">
                     {this.state.devInfo.map(info => (
                         // LOOP DE ITENS
-                        <div key={info.id} className="card bg-transparent rounded-0 border-secondary col-6 col-md-4 col-lg-2">
+                        <div key={info.id} className="card bg-transparent rounded-0 border-secondary col-6 col-md-4 col-lg-3">
                             <div className="card-body">
                                 <figure className="figure card-figure d-flex justify-content-center align-items-center">
                                     <img className="card-img-top img-fluid" src={info.background_image} alt={info.name}/>
