@@ -28,7 +28,7 @@ export default class InternaPlataformas extends Component {
                 </div>
                 {this.state.games.map(platItem =>(
                     // CARD OBJ
-                    <div key={platItem.id} className="card bg-transparent rounded-0 border-secondary col-1 col-md-4 col-lg-3">
+                    <div key={platItem.id} className="card bg-transparent rounded-0 border-secondary col-12 col-md-4 col-lg-3">
                         <div className="card-body">
                             <figure className="figure card-figure d-flex justify-content-center align-items-center">
                                 <img className="card-img-top img-fluid" src={platItem.background_image} alt={platItem.name}/>
