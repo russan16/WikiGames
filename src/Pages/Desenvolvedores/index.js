@@ -17,36 +17,38 @@ export default class Desenvolvedores extends Component {
 
     render() {
         return (
-            <div className="row">
+            <div className="row mx-0">
                 <div className="w-100">
                     <h1 className="display-4 text-light my-4">Desenvolvedores</h1>
                 </div>
-                <table className="devs table table-dark">
-                    <thead className="bg-secondary">
+                <div className="table-responsive">
+                    <table className="devs table table-dark">
+                        <thead className="bg-secondary">
                         <tr>
                             <th className="text-uppercase" scope="col">Desenvolvedor</th>
                             <th className="text-uppercase" scope="col">Jogos lançados</th>
                             <th className="text-uppercase" scope="col">Top games</th>
                         </tr>
-                    </thead>
-                    <tbody>
-                    {this.state.devs.map(dev => (
-                        <tr key={dev.id}>
-                            <th scope="row">
-                                <a className="text-light" href={`/dev/${dev.id}/${dev.name}`}>{dev.name}</a>
-                            </th>
-                            <th>{dev.games_count}</th>
-                            <th>
-                                <div className="btn-group">
-                                    {dev.games.map(game => (
-                                        <a key={game.id} className="dev-btn btn btn-outline-light btn-sm text-truncate" target="_blank" href={`/game/${game.id}`} title={game.name}>{game.name}</a>
-                                    ))}
-                                </div>
-                            </th>
-                        </tr>
-                    ))}
-                    </tbody>
-                </table>
+                        </thead>
+                        <tbody>
+                        {this.state.devs.map(dev => (
+                            <tr key={dev.id}>
+                                <th scope="row">
+                                    <a className="text-light" href={`/dev/${dev.id}/${dev.name}`}>{dev.name}</a>
+                                </th>
+                                <th>{dev.games_count}</th>
+                                <th>
+                                    <div className="btn-group">
+                                        {dev.games.map(game => (
+                                            <a key={game.id} className="dev-btn btn btn-outline-light btn-sm text-truncate" target="_blank" href={`/game/${game.id}`} title={game.name}>{game.name}</a>
+                                        ))}
+                                    </div>
+                                </th>
+                            </tr>
+                        ))}
+                        </tbody>
+                    </table>
+                </div>
             </div>
         );
     }

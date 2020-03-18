@@ -23,7 +23,7 @@ export default class InternaGeneros extends Component {
     render() {
 
         return (
-            <div className="w-100 row mb-5">
+            <div className="w-100 row mx-0 mb-5">
                 <div className="w-100 my-2">
                     <h1 className="text-light display-4">Gênero: {this.state.title}</h1>
                 </div>

@@ -26,7 +26,7 @@ export default class InternaDesenvolvedor extends Component {
                     <h1 className="text-light display-4 my-4">{this.state.devNamed}</h1>
                 </div>
 
-                <div className="row">
+                <div className="row mx-0">
                     {this.state.devInfo.map(info => (
                         // LOOP DE ITENS
                         <div key={info.id} className="card bg-transparent rounded-0 border-secondary col-12 col-md-4 col-lg-3">

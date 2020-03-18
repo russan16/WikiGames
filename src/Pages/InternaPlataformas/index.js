@@ -22,7 +22,7 @@ export default class InternaPlataformas extends Component {
 
     render() {
         return (
-            <div className="row my-5">
+            <div className="row mx-0 my-5">
                 <div className="w-100 mb-3">
                     <h1 className="display-4 text-light">Plataforma: {this.state.platformName}</h1>
                 </div>

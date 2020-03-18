@@ -25,7 +25,7 @@ export default class ReleaseList extends Component {
 
     render() {
         return (
-            <div className="released-list w-100 row pb-5">
+            <div className="released-list w-100 row mx-0 pb-5">
                 <div className="col-12 mt-5 mb-3">
                     <h3 className="display-4 text-light">Recentes</h3>
                 </div>
