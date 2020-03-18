@@ -32,3 +32,12 @@
   width: 100px;
   max-width: 100px;
 }
+
+@media (max-width: 500px) {
+  .text-header {
+    font-size: 16vw;
+    &>span.h6 {
+      font-size: .9rem;
+    }
+  }
+}
