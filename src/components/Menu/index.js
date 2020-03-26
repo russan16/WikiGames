@@ -1,7 +1,7 @@
 import React from "react";
 
 const Menu = () => (
-    <nav className="navbar navbar-expand-lg navbar-dark bg-dark row">
+    <nav className="navbar navbar-expand-lg navbar-dark bg-dark row sticky-top shadow border-bottom">
         <a className="navbar-brand text-light" href="/">WikiGames</a>
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
