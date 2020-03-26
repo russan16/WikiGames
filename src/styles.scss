@@ -33,11 +33,25 @@
   max-width: 100px;
 }
 
+@media (max-width: 768px) {
+  .game-info h1 {
+    font-size: 43px;
+  }
+  .img-info {
+    width: 100%;
+    min-width: 100%;
+  }
+}
+
 @media (max-width: 500px) {
   .text-header {
     font-size: 16vw;
     &>span.h6 {
       font-size: .9rem;
     }
+  }
+
+  .game-info h1 {
+    font-size: 30px;
   }
 }
