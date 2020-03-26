@@ -52,7 +52,7 @@ export default class InternaDesenvolvedor extends Component {
                             </div>
 
                             <div className="w-100 mb-3">
-                                <a href={`/game/${info.id}`} className="btn btn-info btn-block" target="_blank">Ver mais</a>
+                                <a href={`/game/${info.id}`} className="btn btn-info btn-block">Ver mais</a>
                             </div>
                         </div>
                         // LOOP DE ITENS

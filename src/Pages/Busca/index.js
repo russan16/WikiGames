@@ -75,7 +75,7 @@ export default class Busca extends Component {
                                 </div>
                             </div>
                             <div className="w-100 mb-3">
-                                <a href={`game/${games.id}`} className="btn btn-info btn-block" target="_blank">Ver mais</a>
+                                <a href={`game/${games.id}`} className="btn btn-info btn-block">Ver mais</a>
                             </div>
                         </div>
                         // /CARD OBJ
