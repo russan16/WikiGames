@@ -14,7 +14,7 @@ export default class Busca extends Component {
         const response = await api.get(`games?search=${this.state.textSearch}`);
         this.setState({result: response.data.results});
 
-        if (this.state.result.length == 0) {
+        if (this.state.result.length === 0) {
             this.setState({empty:true});
         } else {
             this.setState({empty:false});
