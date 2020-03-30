@@ -38,7 +38,8 @@ export default class ReleaseList extends Component {
                             </figure>
                             <h5 className="card-title text-light">{game.name}</h5>
                             <p className="card-text text-light">Nota: {game.rating}</p>
-                            <p className="card-text text-light">Lançamento: {game.released}</p>
+
+                            <p className="card-text text-light">Lançamento: {Intl.DateTimeFormat('pt-BR').format(new Date(game.released))}</p>
                             <div className="w-100 my-3">
                                 <span className="mr-2 text-light">Generos:</span>
                                 {game.genres.map(element => (

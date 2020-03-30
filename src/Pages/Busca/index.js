@@ -61,7 +61,7 @@ export default class Busca extends Component {
                                 </figure>
                                 <h5 className="card-title text-light">{games.name}</h5>
                                 <p className="card-text text-light">Nota: {games.rating}</p>
-                                <p className="card-text text-light">Lançamento: {games.released}</p>
+                                <p className="card-text text-light">Lançamento: {(games.released) ? Intl.DateTimeFormat('pt-BR').format(new Date(games.released)):'ND'}</p>
                                 <div className="w-100 my-3">
                                     <span className="mr-2 text-light">Generos:</span>
                                     {games.genres.map(element => (

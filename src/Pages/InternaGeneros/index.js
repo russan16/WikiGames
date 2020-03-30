@@ -37,7 +37,7 @@ export default class InternaGeneros extends Component {
                             </figure>
                             <h5 className="card-title text-light">{element.name}</h5>
                             <p className="card-text text-light">Nota: {element.rating}</p>
-                            <p className="card-text text-light">Lançamento: {element.released}</p>
+                            <p className="card-text text-light">Lançamento: {(element.released) ? Intl.DateTimeFormat('pt-BR').format(new Date(element.released)):'ND'}</p>
                             <div className="w-100 my-3">
                                 <span className="mr-2 text-light">Generos:</span>
                                 {element.genres.map(element => (

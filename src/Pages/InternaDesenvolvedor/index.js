@@ -37,7 +37,7 @@ export default class InternaDesenvolvedor extends Component {
                                 </figure>
                                 <h5 className="card-title text-light">{info.name}</h5>
                                 <p className="card-text text-light">Nota: {info.rating}</p>
-                                <p className="card-text text-light">Lançamento: {info.released}</p>
+                                <p className="card-text text-light">Lançamento: {(info.released) ? Intl.DateTimeFormat('pt-BR').format(new Date(info.released)):'ND'}</p>
                                 <div className="w-100 my-3">
                                     <span className="mr-2 text-light">Generos:</span>
                                     {info.genres.map(element => (
