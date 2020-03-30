@@ -37,19 +37,19 @@ export default class Interna extends Component {
                         <li>
                             <span className="mr-2">Generos: </span>
                             {this.state.generos.map(elements => (
-                                <Link to={`/genero/${elements.id}/${elements.name}`} className="badge badge-pill badge-warning mr-2">{elements.name}</Link>
+                                <Link to={`/genero/${elements.id}/${elements.name}`} key={elements.id} className="badge badge-pill badge-warning mr-2">{elements.name}</Link>
                             ))}
                         </li>
                         <li>
                             <span className="mr-2">Desenvolvido por: </span>
                             {this.state.devs.map(elements => (
-                                <Link to={`/dev/${elements.id}/${elements.name}`} className="badge badge-pill badge-secondary mr-2">{elements.name}</Link>
+                                <Link to={`/dev/${elements.id}/${elements.name}`} key={elements.id} className="badge badge-pill badge-secondary mr-2">{elements.name}</Link>
                             ))}
                         </li>
                         <li>
                             <span className="mr-2">Plataformas: </span>
                             {this.state.platforms.map(elements => (
-                                <Link to={`/plataforma-games/${elements.platform.id}/${elements.platform.name}`} className="badge badge-secondary badge-pill mr-2">{elements.platform.name}</Link>
+                                <Link to={`/plataforma-games/${elements.platform.id}/${elements.platform.name}`} key={elements.id} className="badge badge-secondary badge-pill mr-2">{elements.platform.name}</Link>
                             ))}
                         </li>
                     </ul>

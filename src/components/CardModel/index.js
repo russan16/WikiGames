@@ -34,7 +34,7 @@ export default class ReleaseList extends Component {
                     <div key={game.id} className="card bg-transparent rounded-0 border-secondary col-12 col-md-4 col-lg-3">
                         <div className="card-body">
                             <figure className="figure card-figure d-flex justify-content-center align-items-center">
-                                <img className="card-img-top img-fluid" src={game.background_image} alt="Card image cap"/>
+                                <img className="card-img-top img-fluid" src={game.background_image} alt={game.name}/>
                             </figure>
                             <h5 className="card-title text-light">{game.name}</h5>
                             <p className="card-text text-light">Nota: {game.rating}</p>
