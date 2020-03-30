@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import api from "../../services/api";
+import {Link} from "react-router-dom";
 
 export default class ReleaseList extends Component {
     state = {
@@ -41,18 +42,18 @@ export default class ReleaseList extends Component {
                             <div className="w-100 my-3">
                                 <span className="mr-2 text-light">Generos:</span>
                                 {game.genres.map(element => (
-                                    <a href={`/genero/${element.id}/${element.name}`} key={element.name} className="badge badge-secondary mr-2">{element.name}</a>
+                                    <Link to={`/genero/${element.id}/${element.name}`} key={element.name} className="badge badge-secondary mr-2">{element.name}</Link>
                                 ))}
                             </div>
                             <div className="w-100 my-3">
                                 <span className="mr-2 text-light">Plataformas:</span>
                                 {game.platforms.map(element => (
-                                    <a href={`/plataforma-games/${element.platform.id}/${element.platform.name}`} key={element.platform.id} className="badge badge-secondary mr-2">{element.platform.name}</a>
+                                    <Link to={`/plataforma-games/${element.platform.id}/${element.platform.name}`} key={element.platform.id} className="badge badge-secondary mr-2">{element.platform.name}</Link>
                                 ))}
                             </div>
                         </div>
                         <div className="w-100 mb-3">
-                            <a href={`/game/${game.id}`} className="btn btn-info btn-block">Ver mais</a>
+                            <Link to={`/game/${game.id}`} className="btn btn-info btn-block">Ver mais</Link>
                         </div>
                     </div>
                 ))}

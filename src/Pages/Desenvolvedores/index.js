@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import api from "../../services/api";
+import {Link} from "react-router-dom";
 
 export default class Desenvolvedores extends Component {
     state = {
@@ -34,13 +35,13 @@ export default class Desenvolvedores extends Component {
                         {this.state.devs.map(dev => (
                             <tr key={dev.id}>
                                 <th scope="row">
-                                    <a className="text-light" href={`/dev/${dev.id}/${dev.name}`}>{dev.name}</a>
+                                    <Link className="text-light" to={`/dev/${dev.id}/${dev.name}`}>{dev.name}</Link>
                                 </th>
                                 <th>{dev.games_count}</th>
                                 <th>
                                     <div className="btn-group">
                                         {dev.games.map(game => (
-                                            <a key={game.id} className="dev-btn btn btn-outline-light btn-sm text-truncate" target="_blank" href={`/game/${game.id}`} title={game.name}>{game.name}</a>
+                                            <Link key={game.id} className="dev-btn btn btn-outline-light btn-sm text-truncate" to={`/game/${game.id}`} title={game.name}>{game.name}</Link>
                                         ))}
                                     </div>
                                 </th>

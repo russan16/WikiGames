@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import api from "../../services/api";
+import {Link} from "react-router-dom";
 
 export default class InternaGeneros extends Component {
     state = {
@@ -51,7 +52,7 @@ export default class InternaGeneros extends Component {
                             </div>
                         </div>
                         <div className="w-100 mb-3">
-                            <a href={`/game/${element.id}`} className="btn btn-info btn-block">Ver mais</a>
+                            <Link to={`/game/${element.id}`} className="btn btn-info btn-block">Ver mais</Link>
                         </div>
                     </div>
                     // /CARD OBJ

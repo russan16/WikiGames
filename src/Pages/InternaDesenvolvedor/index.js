@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import api from "../../services/api";
+import {Link} from "react-router-dom";
 
 export default class InternaDesenvolvedor extends Component {
     state = {
@@ -52,7 +53,7 @@ export default class InternaDesenvolvedor extends Component {
                             </div>
 
                             <div className="w-100 mb-3">
-                                <a href={`/game/${info.id}`} className="btn btn-info btn-block">Ver mais</a>
+                                <Link to={`/game/${info.id}`} className="btn btn-info btn-block">Ver mais</Link>
                             </div>
                         </div>
                         // LOOP DE ITENS

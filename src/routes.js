@@ -9,11 +9,16 @@ import Desenvolvedores from "./Pages/Desenvolvedores";
 import InternaDesenvolvedor from "./Pages/InternaDesenvolvedor";
 import Generos from "./Pages/Generos";
 import InternaGeneros from "./Pages/InternaGeneros";
+import Menu from "./components/Menu";
+import Header from "./components/Header";
+
 
 const Routes = () => (
     <BrowserRouter>
+        <Menu/>
+        <Header/>
         <Switch>
-            <Route exact path="/" component={ReleaseList}/>
+            <Route path="/" exact component={ReleaseList}/>
             <Route path="/game/:id" component={Interna}/>
             <Route path="/busca" component={Busca}/>
             <Route path="/plataformas" component={Plataformas}/>

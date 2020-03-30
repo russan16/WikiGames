@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import api from "../../services/api";
+import {Link} from "react-router-dom";
 
 export default class Interna extends Component {
     state = {
@@ -36,19 +37,19 @@ export default class Interna extends Component {
                         <li>
                             <span className="mr-2">Generos: </span>
                             {this.state.generos.map(elements => (
-                                <a href={`/generos/${elements.id}/${elements.name}`} className="badge badge-pill badge-warning mr-2">{elements.name}</a>
+                                <Link to={`/genero/${elements.id}/${elements.name}`} className="badge badge-pill badge-warning mr-2">{elements.name}</Link>
                             ))}
                         </li>
                         <li>
                             <span className="mr-2">Desenvolvido por: </span>
                             {this.state.devs.map(elements => (
-                                <a href={`/dev/${elements.id}/${elements.name}`} className="badge badge-pill badge-secondary mr-2">{elements.name}</a>
+                                <Link to={`/dev/${elements.id}/${elements.name}`} className="badge badge-pill badge-secondary mr-2">{elements.name}</Link>
                             ))}
                         </li>
                         <li>
                             <span className="mr-2">Plataformas: </span>
                             {this.state.platforms.map(elements => (
-                                <a href={`/plataforma-games/${elements.platform.id}/${elements.platform.name}`} className="badge badge-secondary badge-pill mr-2">{elements.platform.name}</a>
+                                <Link to={`/plataforma-games/${elements.platform.id}/${elements.platform.name}`} className="badge badge-secondary badge-pill mr-2">{elements.platform.name}</Link>
                             ))}
                         </li>
                     </ul>
