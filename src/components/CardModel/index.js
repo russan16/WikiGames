@@ -15,8 +15,8 @@ export default class ReleaseList extends Component {
 
     loadReleasedGames = async () => {
         const time = new Date();
-        const dia = ((time.getDate()) < 10 ? '0' : '') + (time.getDate());
-        const mes = ((time.getMonth() + 1) < 10 ? '0' : '') + (time.getMonth() + 1);
+        const dia = ((time.getDate()) < 10 ? '0' : '') + (time.getDate()); // adiciona um '0' em numeros menores que 10
+        const mes = ((time.getMonth() + 1) < 10 ? '0' : '') + (time.getMonth() + 1); // adiciona um '0' em numeros menores que 10
         const ano = time.getFullYear();
         this.state.anoPassado = (ano - 1) + '-' + mes + '-' + dia;
         this.state.hoje = ano + '-' + mes + '-' + dia;

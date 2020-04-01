@@ -54,7 +54,7 @@ export default class Busca extends Component {
                 <div className={this.state.buscaAtiva ? 'w-100 mt-5 row mb-5' : 'd-none'}>
                     {this.state.result.map(games => (
                         // CARD OBJ
-                        <div key={games.id} className="card bg-transparent rounded-0 border-secondary col-6 col-md-4 col-lg-3">
+                        <div key={games.id} className="card bg-transparent rounded-0 border-secondary col-12 col-md-4 col-lg-3">
                             <div className="card-body">
                                 <figure className="figure card-figure d-flex justify-content-center align-items-center">
                                     <img className="card-img-top img-fluid" src={games.background_image} alt={games.name}/>
