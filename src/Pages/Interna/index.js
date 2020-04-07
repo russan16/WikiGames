@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import api from "../../services/api";
 import {Link} from "react-router-dom";
+import noImg from '../../imgs/no-image.jpg';
 
 export default class Interna extends Component {
     state = {
@@ -31,7 +32,7 @@ export default class Interna extends Component {
                 <h1 className="display-3 text-light w-100 text-center mt-5 mb-3">{product.name}</h1>
                 <div className="text-light">
                     <figure className="img-thumbnail img-info float-md-left mr-md-4 mr-0">
-                        <img src={product.background_image_additional} alt={product.name}/>
+                        <img src={(product.background_image_additional) ? product.background_image_additional: noImg} alt={product.name}/>
                     </figure>
                     <p>{product.description_raw}</p>
                     <ul className="list-unstyled">

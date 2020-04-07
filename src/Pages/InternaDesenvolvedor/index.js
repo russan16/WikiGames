@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import api from "../../services/api";
 import {Link} from "react-router-dom";
+import noImg from '../../imgs/no-image.jpg';
 
 export default class InternaDesenvolvedor extends Component {
     state = {
@@ -33,7 +34,7 @@ export default class InternaDesenvolvedor extends Component {
                         <div key={info.id} className="card bg-transparent rounded-0 border-secondary col-12 col-md-4 col-lg-3">
                             <div className="card-body">
                                 <figure className="figure card-figure d-flex justify-content-center align-items-center">
-                                    <img className="card-img-top img-fluid" src={info.background_image} alt={info.name}/>
+                                    <img className="card-img-top img-fluid" src={(info.background_image) ? info.background_image : noImg} alt={info.name}/>
                                 </figure>
                                 <h5 className="card-title text-light">{info.name}</h5>
                                 <p className="card-text text-light">Nota: {info.rating}</p>

@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import api from "../../services/api";
 import {Link} from "react-router-dom";
+import noImg from '../../imgs/no-image.jpg';
 
 export default class InternaPlataformas extends Component {
     state = {
@@ -32,7 +33,7 @@ export default class InternaPlataformas extends Component {
                     <div key={platItem.id} className="card bg-transparent rounded-0 border-secondary col-12 col-md-4 col-lg-3">
                         <div className="card-body">
                             <figure className="figure card-figure d-flex justify-content-center align-items-center">
-                                <img className="card-img-top img-fluid" src={platItem.background_image} alt={platItem.name}/>
+                                <img className="card-img-top img-fluid" src={(platItem.background_image) ? platItem.background_image : noImg} alt={platItem.name}/>
                             </figure>
                             <h5 className="card-title text-light">{platItem.name}</h5>
                             <p className="card-text text-light">Nota: {platItem.rating}</p>

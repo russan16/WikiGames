@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import api from "../../services/api";
 import {Link} from "react-router-dom";
+import noImg from '../../imgs/no-image.jpg';
 
 export default class ReleaseList extends Component {
     state = {
@@ -34,7 +35,7 @@ export default class ReleaseList extends Component {
                     <div key={game.id} className="card bg-transparent rounded-0 border-secondary col-12 col-md-4 col-lg-3">
                         <div className="card-body">
                             <figure className="figure card-figure d-flex justify-content-center align-items-center">
-                                <img className="card-img-top img-fluid" src={game.background_image} alt={game.name}/>
+                                <img className="card-img-top img-fluid" src={(game.background_image) ? game.background_image : noImg} alt={game.name}/>
                             </figure>
                             <h5 className="card-title text-light">{game.name}</h5>
                             <p className="card-text text-light">Nota: {game.rating}</p>

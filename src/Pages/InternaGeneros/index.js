@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import api from "../../services/api";
 import {Link} from "react-router-dom";
+import noImg from '../../imgs/no-image.jpg';
 
 export default class InternaGeneros extends Component {
     state = {
@@ -33,7 +34,7 @@ export default class InternaGeneros extends Component {
                     <div key={element.id} className="card bg-transparent rounded-0 border-secondary col-12 col-md-4 col-lg-3">
                         <div className="card-body">
                             <figure className="figure card-figure d-flex justify-content-center align-items-center">
-                                <img className="card-img-top img-fluid" src={element.background_image} alt={element.name}/>
+                                <img className="card-img-top img-fluid" src={(element.background_image) ? element.background_image : noImg} alt={element.name}/>
                             </figure>
                             <h5 className="card-title text-light">{element.name}</h5>
                             <p className="card-text text-light">Nota: {element.rating}</p>
