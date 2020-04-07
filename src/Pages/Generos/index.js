@@ -22,7 +22,9 @@ export default class Generos extends Component {
             <div className="mt-5 mb-5 flex-wrap">
                 <h1 className="display-4 text-light mb-5">Jogos por gêneros</h1>
                 {generos.map(element => (
-                    <Link key={element.id} to={`/genero/${element.id}/${element.name}`} className="btn btn-secondary mr-2 mb-2">{element.name} <span className="badge badge-pill badge-dark">{element.games_count}</span></Link>
+                    <Link key={element.id} to={`/genero/${element.id}/${element.name}`} className="btn btn-secondary mr-2 mb-2">{element.name} <span className="badge badge-pill badge-dark">{Intl.NumberFormat('pt-BR', {
+                        style: 'decimal'
+                    }).format(element.games_count)}</span></Link>
                 ))}
             </div>
         );
